@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "app00"
+description = "My package description"
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "Programing Language :: Python :: 3.10"
+]
+requires-python = "==3.10.*"
+dynamic = ["version"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.dynamic]
+version = {attr = "app00.__version__"}
