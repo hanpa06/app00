@@ -18,7 +18,7 @@ pipeline{
         stage('test'){
             steps{
                 sh 'python -m venv venv00'
-                sh './venv00/bin/pip install -U pip && ./venv00/bin/pip install --user pytest'
+                sh './venv00/bin/pip install -U pip && ./venv00/bin/pip install pytest'
                 sh './venv00/bin/pytest'
             }
         }
