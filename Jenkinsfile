@@ -1,5 +1,7 @@
 pipeline{
-    agent any
+    agent {
+        docker { image 'python:3.10' }
+    }
     stages{
         stage('stage00'){
             steps{
@@ -15,6 +17,7 @@ pipeline{
         }
         stage('test'){
             steps{
+                pip install -U pip && pip install pytest
                 pytest
             }
         }
