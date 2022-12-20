@@ -13,5 +13,10 @@ pipeline{
                 echo 'step01-01'
             }
         }
+        stage('test'){
+            steps{
+                pytest
+            }
+        }
     }
 }
