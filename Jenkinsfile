@@ -17,8 +17,8 @@ pipeline{
         }
         stage('test'){
             steps{
-                pip install -U pip && pip install pytest
-                pytest
+                sh 'pip install -U pip && pip install pytest'
+                sh 'pytest'
             }
         }
     }
